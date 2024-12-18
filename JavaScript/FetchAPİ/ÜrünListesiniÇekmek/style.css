@@ -1,0 +1,52 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #urunler {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd; /* Kenarlık rengi */
+            border-radius: 5px; /* Kenar yuvarlama */
+            padding: 15px; /* İç boşluk */
+            background-color: #fff; /* Arka plan rengi */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+            transition: transform 0.2s; /* Geçiş efekti */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Ürün kartı üzerine gelindiğinde büyütme efekti */
+        }
+
+        .product img {
+            max-width: 100%; /* Resmin maksimum genişliği */
+            height: auto; /* Yükseklik otomatik ayarlanır */
+            border-radius: 3px; /* Resmin köşe yuvarlama efekti */
+            margin-bottom: 10px; /* Resim ile başlık arasında boşluk */
+        }
+
+        .product h3 {
+            margin: 0 0 10px 0; /* Başlık altındaki boşluğu ayarla */
+            font-size: 18px; /* Yazı boyutu */
+            color: #555; /* Başlık rengi */
+        }
+
+        .product p {
+            margin: 5px 0; /* Paragraf altındaki boşluğu ayarla */
+            font-size: 16px; /* Yazı boyutu */
+            color: #777; /* Metin rengi */
+        }
+ 

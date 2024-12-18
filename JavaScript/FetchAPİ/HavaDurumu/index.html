@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Uygulaması</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+            justify-content: center;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            border: 1px solid rgb(183, 199, 57);
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+        }
+        input{
+            background-color: none;
+            background: none; 
+            border: none;
+            justify-content: center;
+            background-color: beige;
+        }
+        button{
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 50%;
+            height: 25%;
+            cursor: pointer;
+            
+
+        }
+        div{
+            margin-top: 50px;
+           
+            max-height: 100%;
+            max-width: 100%;
+            height: 150px;
+           border-radius: 10px;
+           background-color: rgb(207, 194, 194);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Hava Durumu Sorgulama</h1>
+    <input type="text" id="sehir" placeholder="Şehir Giriniz...">
+    <button onclick="havaDurumuGetir()">Sorgula</button>
+    <div id="sonuc"></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#kullanici-listesi {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kullanici-karti {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.kullanici-karti img {
+    border-radius: 50%;
+}
