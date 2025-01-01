@@ -157,7 +157,7 @@ const { title, author } = books;
 console.log("Kitap Adi : " + title + " " + "Yazari : " + author)
 
 
-const book4 = getBook(4);
+const book4 = getBook(1);
 
 const { mesaj } = book4;
 
@@ -363,5 +363,106 @@ Kısa Devre Yapma ile İlgili Önemli Noktalar:
 &&:(ve) İlk yanlış değeri bulur ve döndürür, diğer koşulları kontrol etmez.
 ||: (veya)İlk doğru değeri bulur ve döndürür, diğer koşulları kontrol etmez.
 ??: Yalnızca null veya undefined değerini kontrol eder, diğer falsy değerler (örneğin, 0, false, NaN) geçerlidir.*/
+
+// false : 0,'',null,undefined
+
+console.log(value && 'some String');
+
+let abc = null;
+let cba = 52;
+
+if (abc > 0 && cba > 0) {
+  console.log('ikisi pozitiftir');
+}
+else {
+  console.log('ikisi pozitif değildir')
+}
+
+if (abc > 0 || cba > 0) {
+  console.log("çalişir.")
+}
+
+let result23 = abc || cba;
+console.log(result23);
+
+let result24 = abc ?? cba;
+console.log(result24);
+
+
+let name = null;
+let greeting = `Merhaba, ${name ?? 'Misafir'}!`;
+console.log(greeting);
+
+let user = { name: 'Ahmet', address: 'ipek mahallesi' };
+let city = user?.address ?? 'bilinmiyor';
+
+console.log(city);
+
+//user değeri var mı? varsa adress değeri var mı varsa city var mı varsa city döndür eğer bunlardan herhangi biri yoksa null döner. döngü kırılır
+
+console.log(true || 2 ** 4);
+console.log(false || 2 ** 4);
+
+
+const spanishTranslation = book4.translations.spanish || "NOT TRANSLATED"
+console.log(spanishTranslation);
+
+function getTotalReviewCount(book4) {
+  const goodreads = book4.reviews.goodreads.reviewsCount;
+  const librarything = book4.reviews.librarything.reviewsCount;
+  return goodreads + librarything;
+}
+
+console.log(getTotalReviewCount(book4));
+
+//Opsiyonel Zincirleme (Optional Chaining)
+
+const kkullanici = {
+  name: 'Ahmet',
+  address: {
+    city: 'İstanbul',
+    street: 'Bağcılar',
+    apartment: {
+      number: 123
+    }
+  }
+};
+
+
+
+const access = kkullanici?.address?.city;
+
+console.log(access);
+
+const colors = ['red', 'green', 'blue'];
+
+const secondColor = colors?.[32];
+
+console.log(secondColor);
+
+function getUSERData(userID) {
+  return {
+    name: 'Ayşe',
+    email: 'ayse@example.com'
+  };
+}
+
+const userData = getUSERData(7)?.email;
+console.log(userData);
+
+const config = {
+  features: {
+    darkMode: true
+  }
+};
+
+
+const isDarkModeEnabled = config?.features?.darkMode;
+if (isDarkModeEnabled) {
+  //DARK MODE AKTİF EDİLİR.
+};
+
+
+//The Array Map Method
 
 
